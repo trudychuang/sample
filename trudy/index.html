@@ -7,49 +7,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello</title>
     <!-- import google特殊字體 Lobster -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" 
-    rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" type="text/css">
     <!-- internal css -->
     <style>
-        /* class:.orange-text會呈現橘色字 */
-     .orange-text{color:orange;}
+        /* id選取方式：在名稱前加入“#” 例：#title */
+        #title {
+            color: steelblue;
+            text-align: center;
+        }
+
+        /* class選取方式：在名稱前加入“.” 例：.orange-text */
+        .orange-text {
+            color: orange;
+            text-align: center;
+        }
+
         /* p所屬樣式 */
-     p{font-size: 16px;
-        font-family: Arial, Helvetica, sans-serif;}
+        p {
+            font-size: 16px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         /* 置入特殊字體在h1 */
-     h1{font-family: Lobster;}
+        h1 {
+            font-family: Lobster;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        .option {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1 style="orange-text">Hello World!</h1>
+    <!-- id樣式 一個頁面裡只能有一個id -->
+    <h1 id="title">yo</h1>
+    <!-- class樣式 一個頁面裡能有無限個class -->
+    <h1 class="orange-text">Hello World!</h1>
     <!-- 在連結標籤裡放 target="blank"為另開分頁 -->
     <p>I'm <a href="https://trudychuang.github.io/sample/trudy/index" target="_blank">Trudy</a></p>
-    <a href="https://trudychuang.github.io/sample/trudy/index"><img src="avatar.jpg" alt="avatar" style="width:100px;height:118px;"></a>
+    <a href="https://trudychuang.github.io/sample/trudy/index"><img src="avatar.jpg" alt="avatar"
+            style="width:100px;height:118px;"></a>
     <!-- js alert -->
-    <script>//alert("welcome to my kingdom hehe")</script>
+    <script>
+        //alert("welcome to my kingdom hehe")
+    </script>
     <main>
-   <!-- inline行內 css 直接在標籤裡加上style=""  -->
-    <p style="color: rgb(189, 157, 90);">About me:</p>
-   <!-- <ul> 是unordered list  -->
-   <!-- <ol> 是ordered list 會出現序號 -->
-   <!-- <ul>跟<ol> 裡可以包含無限個<li> -->
-    <ul>
-        <li>Female</li>
-        <li>24 years old</li>
-        <li>Working at Taipei.</li>
-    </ul>
-    <p style="color: cadetblue;">three things I like:</p>
-    <ol>
-        <li>melted chocolate</li>
-        <li>milk</li>
-        <li>YOU lol</li>
-    </ol>
-    <p>What do you like?</p>
-    <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
-    <!-- 在input裡加上required 尚未填入內容前不能submit -->
-    <input type="text" required placeholder="say trudy,please♡">
-    <button type="submit">submit ></button>
+        <!-- inline行內 css 直接在標籤裡加上style=""  -->
+        <p style="color:cadetblue;">About me:</p>
+        <!-- <ul> 是unordered list  -->
+        <!-- <ol> 是ordered list 會出現序號 -->
+        <!-- <ul>跟<ol> 裡可以包含無限個<li> -->
+        <div style="height: 80px;width: auto;background-color: whitesmoke;">
+            <ul class="option">
+                <li>Female</li>
+                <li>24 years old</li>
+                <li>Working at Taipei.</li>
+            </ul>
+        </div>
+        <p style="color: cadetblue;">three things I like:</p>
+        <div style="height: 80px;width: auto;background-color: whitesmoke;">
+        <ol class="option">
+            <li>melted chocolate</li>
+            <li>milk</li>
+            <li>YOU lol</li>
+        </ol>
+        </div>
+        <p>What do you like?</p>
+        <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
+        <!-- 在input裡加上required 尚未填入內容前不能submit -->
+        <input type="text" required placeholder="say trudy,please♡">
+        <button type="submit">submit ></button>
     </main>
     <!-- 建立input要被包在form標籤裡是因為？？？  -->
     <!-- radio是單選項 -->
@@ -63,10 +96,10 @@
     <p>trudy現在怎麼樣</p>
     <form>
         <label for="angry">
-            <input id="angry" type="radio" name="angry-happy" value="angry" >angry
-    
+            <input id="angry" type="radio" name="angry-happy" value="angry">angry
+
             <label for="happy">
-                <input id="happy" type="radio" name="angry-happy" value="happy" >happy
+                <input id="happy" type="radio" name="angry-happy" value="happy">happy
     </form>
     <br>
     <!-- checkbox是複選項 -->
@@ -74,13 +107,13 @@
     <p>trudy怎麼樣</p>
     <form>
         <label for="cute">
-            <input id="cute" type="checkbox" name="personality" checked value="cute" >cute
-        <label for="sweet">
-            <input id="sweet" type="checkbox" name="personality" value="sweet" >sweet
-        <label for="kind">
-            <input id="kind" type="checkbox" name="personality" value="kind" >kind
+            <input id="cute" type="checkbox" name="personality" checked value="cute">cute
+            <label for="sweet">
+                <input id="sweet" type="checkbox" name="personality" value="sweet">sweet
+                <label for="kind">
+                    <input id="kind" type="checkbox" name="personality" value="kind">kind
     </form>
-    
+
 </body>
 
 </html>
