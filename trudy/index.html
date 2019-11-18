@@ -33,9 +33,10 @@
         h1 {
             font-family: Lobster;
         }
-
+        /* img水平置中，display:block 區塊，元素會以區塊方式呈現 */
         img {
             margin: auto;
+            display: block;
         }
 
         .option {
@@ -44,9 +45,12 @@
         .fixed {
              position: fixed;
              bottom: 0;
-             width: 200;
-             height: 200;
+             right: 0;
+             width:250px;
+             height: 50px;
              background-color: khaki;
+             text-align: center;
+             line-height: 50px;
         }
     </style>
 </head>
@@ -58,8 +62,8 @@
     <h1 class="orange-text">Hello World!</h1>
     <!-- 在連結標籤裡放 target="blank"為另開分頁 -->
     <p>I'm <a href="https://trudychuang.github.io/sample/trudy/index" target="_blank">Trudy</a></p>
-    <a href="https://trudychuang.github.io/sample/trudy/index"><img src="avatar.jpg" alt="avatar"
-            style="width:100px;height:118px;"></a>
+    <a href="https://trudychuang.github.io/sample/trudy/index"><img src="avatar.png" alt="avatar"
+            style="width:200px;height:200px;"></a>
     <!-- js alert -->
     <script>
         //alert("welcome to my kingdom hehe")
@@ -121,7 +125,7 @@
                 <label for="kind">
                     <input id="kind" type="checkbox" name="personality" value="kind">kind
     </form>
-    <div class="fixed">笑嗨嗨</div>
+    <div class="fixed">安安你好哇(๑•́ ₃ •̀๑)</div>
 </body>
 
 </html>
