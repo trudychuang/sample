@@ -1,14 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello</title>
+    <!-- import google特殊字體 Lobster -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" type="text/css">
+    <!-- internal css -->
+    <style>
+        /* id選取方式：在名稱前加入“#” 例：#title */
+        #title {
+            color: steelblue;
+            text-align: center;
+        }
+
+        /* class選取方式：在名稱前加入“.” 例：.orange-text */
+        .orange-text {
+            color: orange;
+            text-align: center;
+        }
+
+        /* p所屬樣式 */
+        p {
+            font-size: 16px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 置入特殊字體在h1 */
+        h1 {
+            font-family: Lobster;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        .option {
+            text-align: center;
+        }
+        .fixed {
+             position: fixed;
+             bottom: 0;
+             width: 200;
+             height: 200;
+             background-color: khaki;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello World!</h1>
-    <p>I'm Trudy</p>
-    <img src="avatar.jpg" alt="avatar" style="width:100px;height:118px;">
+    <!-- id樣式 一個頁面裡只能有一個id -->
+    <h1 id="title">yo</h1>
+    <!-- class樣式 一個頁面裡能有無限個class -->
+    <h1 class="orange-text">Hello World!</h1>
+    <!-- 在連結標籤裡放 target="blank"為另開分頁 -->
+    <p>I'm <a href="https://trudychuang.github.io/sample/trudy/index" target="_blank">Trudy</a></p>
+    <a href="https://trudychuang.github.io/sample/trudy/index"><img src="avatar.jpg" alt="avatar"
+            style="width:100px;height:118px;"></a>
+    <!-- js alert -->
+    <script>
+        //alert("welcome to my kingdom hehe")
+    </script>
+    <main>
+        <!-- inline行內 css 直接在標籤裡加上style=""  -->
+        <p style="color:steelblue;">About me:</p>
+        <!-- <ul> 是unordered list  -->
+        <!-- <ol> 是ordered list 會出現序號 -->
+        <!-- <ul>跟<ol> 裡可以包含無限個<li> -->
+        <div style="height: 80px;width: auto;
+        background-color: whitesmoke;padding:10px,auto,10px,auto;">
+            <ul class="option">
+                <li>Female</li>
+                <li>24 years old</li>
+                <li>Working at Taipei.</li>
+            </ul>
+        </div>
+        <p style="color: steelblue;">three things I like:</p>
+        <div style="height: 80px;width: auto;background-color: whitesmoke;">
+        <ol class="option">
+            <li>melted chocolate</li>
+            <li>milk</li>
+            <li>YOU lol</li>
+        </ol>
+        </div>
+        <p>What do you like?</p>
+        <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
+        <!-- 在input裡加上required 尚未填入內容前不能submit -->
+        <input type="text" required placeholder="say trudy,please♡">
+        <button type="submit">submit ></button>
+    </main>
+    <!-- 建立input要被包在form標籤裡是因為？？？  -->
+    <!-- radio是單選項 -->
+    <!-- 加上value標籤 會讓user submit後提交到server 
+        收到單選題內容為：angry-happy:happy
+        若沒有加上value則會收到：：angry-happy：on 預設“on"是沒有判斷力的答案
+        複選題同理要加上value去判斷
+     -->
+    <br>
+    <br>
+    <p>trudy現在怎麼樣</p>
+    <form>
+        <label for="angry">
+            <input id="angry" type="radio" name="angry-happy" value="angry">angry
+
+            <label for="happy">
+                <input id="happy" type="radio" name="angry-happy" value="happy">happy
+    </form>
+    <br>
+    <!-- checkbox是複選項 -->
+    <!-- 在name後加上 checked標籤 會變成預設勾選的項目，舉例如下第一個選項為預設勾選 -->
+    <p>trudy怎麼樣</p>
+    <form>
+        <label for="cute">
+            <input id="cute" type="checkbox" name="personality" checked value="cute">cute
+            <label for="sweet">
+                <input id="sweet" type="checkbox" name="personality" value="sweet">sweet
+                <label for="kind">
+                    <input id="kind" type="checkbox" name="personality" value="kind">kind
+    </form>
+    <div class="fixed">笑嗨嗨</div>
 </body>
+
 </html>
