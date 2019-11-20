@@ -35,6 +35,7 @@
         h1 {
             font-family: Lobster;
         }
+
         /* img水平置中，display:block 區塊，元素會以區塊方式呈現 */
         img {
             margin: auto;
@@ -44,16 +45,44 @@
         .option {
             text-align: center;
         }
+
         /* 加上浮動區塊，line-height(設定高度數值同區塊高)可以讓文字水平垂置中 */
         .fixed {
-             position: fixed;
-             bottom: 0;
-             right: 0;
-             width:250px;
-             height: 50px;
-             background-color: khaki;
-             text-align: center;
-             line-height: 50px;
+            position: fixed;
+            bottom: 50%;
+            right: 0;
+            width: 192px;
+            height: 50px;
+            background-color: khaki;
+            text-align: center;
+            line-height: 50px;
+        }
+        .container{
+            border: 4px solid cadetblue;
+            width: 500px;
+            margin: 20px;
+        }
+        .nav {
+            border: 4px solid orange;
+            width: 300px;
+            height: 240px;
+            /* float:left; 左邊浮動 */
+            float:left;
+            /* 元素的內距和邊框將不會增加元素本身的寬度 */
+            box-sizing: border-box;
+        }
+        .section{
+             border: 4px solid steelblue;
+             width: 200px;
+             height: 120px;
+             margin-left: 300px;
+             /* 元素的內距和邊框將不會增加元素本身的寬度 */
+             box-sizing: border-box;
+        }
+        /* 可以完整包覆div */
+        .clearfix{
+            overflow:auto;
+            zoom: 1;
         }
     </style>
 </head>
@@ -67,10 +96,6 @@
     <p>I'm <a href="https://trudychuang.github.io/sample/trudy/index" target="_blank">Trudy</a></p>
     <a href="https://trudychuang.github.io/sample/trudy/index"><img src="img/avatar.png" alt="avatar"
             style="width:200px;height:200px;"></a>
-    <!-- js alert -->
-    <script>
-        //alert("welcome to my kingdom hehe")
-    </script>
     <main>
         <!-- inline行內 css 直接在標籤裡加上style=""  -->
         <p style="color:steelblue;">About me:</p>
@@ -87,11 +112,11 @@
         </div>
         <p style="color: steelblue;">three things I like:</p>
         <div style="height: 80px;width: auto;background-color: whitesmoke;">
-        <ol class="option">
-            <li>melted chocolate</li>
-            <li>milk</li>
-            <li>YOU lol</li>
-        </ol>
+            <ol class="option">
+                <li>melted chocolate</li>
+                <li>milk</li>
+                <li>YOU lol</li>
+            </ol>
         </div>
         <p>What do you like?</p>
         <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
@@ -103,7 +128,7 @@
     <!-- radio是單選項 -->
     <!-- 加上value標籤 會讓user submit後提交到server 
         收到單選題內容為：angry-happy:happy
-        若沒有加上value則會收到：：angry-happy：on 預設“on"是沒有判斷力的答案
+        若沒有加上value則會收到：angry-happy：on 預設“on"是沒有判斷力的答案
         複選題同理要加上value去判斷
      -->
     <br>
@@ -129,6 +154,25 @@
                     <input id="kind" type="checkbox" name="personality" value="kind">kind
     </form>
     <div class="fixed">安安你好哇(๑•́ ₃ •̀๑)</div>
+    <!-- 同時有 ab兩個 class寫法： class="a  b" -->
+    <div class="container clearfix">
+        <div class="nav">nav</div>
+        <div class="section">section1</div>
+        <div class="section">section2</div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- js alert -->
+    <script>
+        //alert("welcome to my kingdom hehe")
+    </script>
 </body>
 
 </html>
