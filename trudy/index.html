@@ -84,6 +84,15 @@
             overflow:auto;
             zoom: 1;
         }
+        /*  [attr=value] attribute type標籤selector的用法 */
+        [type="text"]{
+        margin:20px;
+        padding:10px;
+        width: 192px;
+        border: 4px solid steelblue;
+        }
+        [type="radio"]{margin:20px;}
+        [type="checkbox"]{margin:20px;}
     </style>
 </head>
 
@@ -118,10 +127,10 @@
                 <li>YOU lol</li>
             </ol>
         </div>
-        <p>What do you like?</p>
+        <p>How are you?</p>
         <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
         <!-- 在input裡加上required 尚未填入內容前不能submit -->
-        <input type="text" required placeholder="say trudy,please♡">
+        <input type="text" required placeholder="say something♡">
         <button type="submit">submit ></button>
     </main>
     <!-- 建立input要被包在form標籤裡是因為？？？  -->
