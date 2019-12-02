@@ -41,7 +41,11 @@
             margin: auto;
             display: block;
         }
-
+        button{
+            background-color: steelblue;
+            padding:12px;
+            margin:0px;
+        }
         .option {
             text-align: center;
         }
@@ -93,6 +97,13 @@
         }
         [type="radio"]{margin:20px;}
         [type="checkbox"]{margin:20px;}
+        /* hover state using the :hover  */
+        a{
+            color:steelblue;
+        }
+        a:hover{
+            color:rgb(44, 86, 121);
+        }
     </style>
     <!-- js alert -->
     <!-- HERE: script should write in the bottom of <head> or <body> -->
@@ -111,6 +122,7 @@
     <a href="https://trudychuang.github.io/sample/trudy/index"><img src="img/avatar.png" alt="avatar"
             style="width:200px;height:200px;"></a>
     <main>
+        <br>
         <!-- inline行內 css 直接在標籤裡加上style=""  -->
         <p style="color:steelblue;">About me:</p>
         <!-- <ul> 是unordered list  -->
@@ -124,6 +136,7 @@
                 <li>Working at Taipei.</li>
             </ul>
         </div>
+        <br>
         <p style="color: steelblue;">three things I like:</p>
         <div style="height: 80px;width: auto;background-color: whitesmoke;">
             <ol class="option">
@@ -132,6 +145,7 @@
                 <li>YOU lol</li>
             </ol>
         </div>
+        <br>
         <p>How are you?</p>
         <!-- placeholder 在打字內容區顯示的文字/提示文字 -->
         <!-- 在input裡加上required 尚未填入內容前不能submit -->
@@ -168,14 +182,19 @@
                     <input id="kind" type="checkbox" name="personality" value="kind">kind
     </form>
     <div class="fixed">安安你好哇(๑•́ ₃ •̀๑)</div>
+    <!-- use the <hr> to add a horizontal line across the width of its containing element. -->
+    <hr>
     <!-- 同時有 ab兩個 class寫法： class="a  b" -->
     <div class="container clearfix">
         <div class="nav">nav</div>
         <div class="section">section1</div>
         <div class="section">section2</div>
     </div>
+    <!-- <u>底線標籤 -->
+    <p><u>The standard Lorem Ipsum passage</u>, used since the 1500s
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 
-
+    
 </body>
 
 </html>
