@@ -51,12 +51,13 @@
 
         /* 加上浮動區塊，line-height(設定高度數值同區塊高)可以讓文字水平垂置中 */
         .fixed {
+            color: white;
             position: fixed;
             bottom: 20%;
             right: 0;
             width: 192px;
             height: 50px;
-            background-color: khaki;
+            background-color:steelblue;
             text-align: center;
             line-height: 50px;
         }
@@ -103,6 +104,12 @@
         a:hover{
             color:rgb(44, 86, 121);
         }
+        .strong{
+            font-weight: 700;
+            border-bottom: solid 4px #FFCCCC; 
+            letter-spacing: .06em;
+            box-sizing:border-box;
+         }
         /* 漸層色應用 */
         .linear-gradient{ 
             width:80%;
@@ -201,7 +208,7 @@
     </div>
     <!-- <u>底線標籤 -->
     <p><u>The standard Lorem Ipsum passage</u>, used since the 1500s
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="strong">This is an important message.</span> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
     <div class="linear-gradient">linear-gradient</div>>
     
 </body>
