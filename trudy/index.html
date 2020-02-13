@@ -13,6 +13,13 @@
     <!-- internal css -->
     <style>
         /* id選取方式：在名稱前加入“#” 例：#title */
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: center;
+            color: #FFCCCC;
+        }
         #title {
             color: steelblue;
             text-align: center;
@@ -31,8 +38,8 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* 置入特殊字體在h1 */
-        h1 {
+        /* 置入特殊字體在h2 */
+        h2 {
             font-family: Lobster;
         }
 
@@ -135,6 +142,14 @@
             transform:skewX(-15deg)skewY(-5deg);
             /* transform: skewX(-15deg) x軸傾斜 */
         }
+        #here{
+            width: 800px;
+            height: 40px;
+            margin: auto;
+            background-color: cornsilk;
+            line-height: 40px;
+            text-align: center;
+        }
     </style>
     <!-- js alert -->
     <!-- HERE: script should write in the bottom of <head> or <body> -->
@@ -144,10 +159,16 @@
 </head>
 
 <body>
+    <header>
+        <h1>hey</h1>    
+        <nav><ul><li><a href="#here">down</a></li></ul></nav>
+        <!-- 在同一頁面下錨點到對應 id -->
+    </header>
+    <!-- h1 一個頁面裡只能有一個h1 -->
     <!-- id樣式 一個頁面裡只能有一個id -->
-    <h1 id="title">yo</h1>
+    <h2 id="title">yo</h2>
     <!-- class樣式 一個頁面裡能有無限個class -->
-    <h1 class="orange-text">Hello World!</h1>
+    <h2 class="orange-text">Hello World!</h2>
     <!-- 在連結標籤裡放 target="blank"為另開分頁 -->
     <p>I'm <a href="https://trudychuang.github.io/sample/trudy/index" target="_blank">Trudy</a></p>
     <a href="https://trudychuang.github.io/sample/trudy/index"><img src="img/avatar.png" alt="avatar"
@@ -226,6 +247,7 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="strong">This is an important message.</span> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
     <div class="linear-gradient">linear-gradient</div>
     <div class="box1">box1</div>
+    <section id="here">come here</section>
 </body>
 
 </html>
