@@ -240,9 +240,24 @@
                 <label for="kind">
                     <input id="kind" type="checkbox" name="personality" value="kind">kind
     </form>
+    <br>
+    <!-- 跟上面的不一樣 多了<fieldset> ， <p>改成<legend>，input跟label順序顛倒-->
+    <fieldset>
+        <legend>Choose one!</legend>
+        <input id="cute" type="radio" name="personality" value="cute">
+        <label for="cute">cute</label><br>
+        <input id="sweet" type="radio" name="personality" value="sweet">
+        <label for="sweet">sweet<label><br>
+        <input id="kind" type="radio" name="personality" value="kind">
+        <label for="kind">kind</label><br>
+    </fieldset>
+    <br>
     <div class="fixed">安安你好哇(๑•́ ₃ •̀๑)</div>
     <!-- use the <hr> to add a horizontal line across the width of its containing element. -->
     <hr>
+    <br>
+    <br>
+    <br>
     <!-- 同時有 ab兩個 class寫法： class="a  b" -->
     <div class="container clearfix">
         <div class="nav">nav</div>
